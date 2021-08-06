@@ -1,5 +1,6 @@
 import React from 'react';
-
+// import { connect } from 'react-redux';
+// import { setSearchField } from './actions';
 
 class SearchBox extends React.Component {
 	render()
@@ -17,5 +18,10 @@ class SearchBox extends React.Component {
 	}
 
 }
-
+// const mapDispatchToProps =(dispatch)=>{
+// 	return {
+// 		searchChange: () => dispatch(setSearchField())
+// 	}
+// }
+// export default connect(null,mapDispatchToProps)(SearchBox);
 export default SearchBox;

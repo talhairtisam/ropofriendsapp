@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
-//import { robots } from './robots';
+// import { connect } from 'react-redux';
+
 
 class CardList extends React.Component {
  	
@@ -25,5 +26,13 @@ class CardList extends React.Component {
 			);
 	}
 }
+
+// const mapStateToProps = (state) => {
+// 	return {
+// 		robots: state.change.searchField
+// 	}
+// }
+
+// export default connect(mapStateToProps)(CardList);
 
 export default CardList;

@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore,combineReducers } from 'redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
+import { searchRobots } from './reducers';
+
+const rootReducer = combineReducers({
+  change: searchRobots
+})
+const store = createStore(rootReducer)
+
 
 ReactDOM.render(
   <React.StrictMode>
-  		<App />
+  		<Provider store={store}>
+  			<App />
+  		</Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
